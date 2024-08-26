@@ -1,0 +1,18 @@
+<section id="features" class="py-16 md:py-20 lg:py-28">
+    <div class="container">
+        <app-section-title [title]="'Main Features'"
+            [center]="true" class="text-body-color dark:text-body-color-dark">
+        </app-section-title>
+
+        <div class="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+            <ng-container *ngFor="let feature of features">
+                <a [href]="feature.link" target="_blank"
+                    class="flex flex-col items-center text-center no-underline text-body-color dark:text-body-color-dark">
+                    <app-single-feature [icon]="feature.icon" [title]="feature.title" [paragraph]="feature.paragraph"
+                        class="flex flex-col items-center text-center">
+                    </app-single-feature>
+                </a>
+            </ng-container>
+        </div>
+    </div>
+</section>

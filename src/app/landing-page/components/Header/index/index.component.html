@@ -1,0 +1,66 @@
+<header class="header left-0 top-0 z-40 flex w-full items-center" [ngClass]="{
+  'dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition': sticky,
+  'absolute bg-transparent': !sticky
+}">
+
+<div class="container">
+  <div class="relative -mx-4 flex items-center justify-between">
+    <div class="w-60 max-w-full px-4 xl:mr-12">
+      <a routerLink="/" [ngClass]="{'header-logo block w-full': true, 'py-5 lg:py-2': sticky, 'py-8': !sticky}">
+        <img src="/assets/logo/bird.svg" alt="logo" class="w-full dark:hidden logo-small"
+          style="max-width: 250px; height: auto;" />
+        <img src="/assets/logo/bird_white.svg" alt="logo" class="hidden w-full dark:block logo-small"
+          style="max-width: 250px; height: auto;" />
+      </a>
+    </div>
+
+    <div class="flex w-full items-center justify-between px-4">
+      <div>
+        <button (click)="toggleNavbar()" id="navbarToggler" aria-label="Mobile Menu"
+          class="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden">
+
+          <span
+            [ngClass]="{'relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white': true, 'top-[7px] rotate-45': navbarOpen}">
+          </span>
+
+          <span
+            [ngClass]="{'relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white': true, 'opacity-0': navbarOpen}">
+          </span>
+
+          <span
+            [ngClass]="{'relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white': true, 'top-[-8px] -rotate-45': navbarOpen}">
+          </span>
+        </button>
+
+        <nav id="navbarCollapse" [ngClass]="{
+          'navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100': true,
+          'visibility top-full opacity-100': navbarOpen,
+          'invisible top-[120%] opacity-0': !navbarOpen
+        }">
+          <ul class="block lg:flex lg:space-x-12">
+            <ng-container *ngFor="let menuItem of menuData; let i = index">
+              <li class="group relative">
+                <ng-container *ngIf="menuItem.path">
+                  <a [href]="menuItem.path" [target]="menuItem.newTab ? '_blank' : '_self'" [ngClass]="{
+          'flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6': true,
+          'text-primary dark:text-white': usePathName === menuItem.path,
+          'text-dark hover:text-primary dark:text-white/70 dark:hover:text-white': usePathName !== menuItem.path
+        }">
+                    {{ menuItem.title }}
+                  </a>
+                </ng-container>
+                <!-- Handle submenu items here, if needed -->
+              </li>
+            </ng-container>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex items-center justify-end pr-16 lg:pr-0">
+        <div>
+          <app-theme-toggler></app-theme-toggler>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>

@@ -1,0 +1,21 @@
+<div class="flex w-1/2 items-center justify-center px-3 py-[15px] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
+  <a
+    [href]="brand.href"
+    target="_blank"
+    rel="nofollow noreferrer"
+    class="relative h-10 w-full opacity-70 transition hover:opacity-100 dark:opacity-60 dark:hover:opacity-100"
+  >
+    <img
+      *ngIf="!isDarkMode"
+      [src]="brand.image"
+      [alt]="brand.name || 'Brand logo'"
+      class="block"
+    />
+    <img
+      *ngIf="isDarkMode"
+      [src]="brand.imageLight"
+      [alt]="brand.name || 'Brand logo in dark mode'"
+      class="block"
+    />
+  </a>
+</div>

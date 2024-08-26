@@ -1,0 +1,15 @@
+<div class="blog-list">
+  <div *ngFor="let blog of blogs" class="blog-item">
+    <h2>{{ blog.title }}</h2>
+    <p>{{ blog.paragraph }}</p>
+    <img [src]="blog.image" alt="{{ blog.title }}" />
+    <div>
+      <h4>{{ blog.author.name }}</h4>
+      <p>{{ blog.author.designation }}</p>
+    </div>
+    <p>Published: {{ blog.publishDate }}</p>
+    <div *ngFor="let tag of blog.tags">
+      <span>{{ tag }}</span>
+    </div>
+  </div>
+</div>

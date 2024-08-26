@@ -1,0 +1,21 @@
+<nav>
+    <ul>
+      <li *ngFor="let menuItem of menuData">
+        <a
+          [routerLink]="menuItem.path"
+          [target]="menuItem.newTab ? '_blank' : '_self'"
+          >{{ menuItem.title }}</a
+        >
+        <ul *ngIf="menuItem.submenu">
+          <li *ngFor="let subMenuItem of menuItem.submenu">
+            <a
+              [routerLink]="subMenuItem.path"
+              [target]="subMenuItem.newTab ? '_blank' : '_self'"
+              >{{ subMenuItem.title }}</a
+            >
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  

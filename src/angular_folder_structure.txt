@@ -1,0 +1,172 @@
+.
+├── angular_folder_structure.txt
+├── app
+│   ├── app.component.css
+│   ├── app.component.html
+│   ├── app.component.ts
+│   ├── app.module.ts
+│   ├── app-routing.module.ts
+│   ├── core
+│   │   ├── guards
+│   │   │   └── auth.guard.ts
+│   │   ├── interceptors
+│   │   │   └── auth.interceptor.ts
+│   │   ├── models
+│   │   │   ├── league.model.ts
+│   │   │   └── user.model.ts
+│   │   ├── services
+│   │   │   ├── api.service.ts
+│   │   │   └── auth.service.ts
+│   │   └── utils
+│   │       └── date.util.ts
+│   ├── features
+│   │   ├── auth
+│   │   │   ├── login
+│   │   │   │   ├── login.component.css
+│   │   │   │   ├── login.component.html
+│   │   │   │   └── login.component.ts
+│   │   │   └── register
+│   │   │       ├── register.component.css
+│   │   │       ├── register.component.html
+│   │   │       └── register.component.ts
+│   │   ├── challenges
+│   │   │   ├── challenges.component.css
+│   │   │   ├── challenges.component.html
+│   │   │   └── challenges.component.ts
+│   │   ├── communities
+│   │   │   ├── communities.component.css
+│   │   │   ├── communities.component.html
+│   │   │   └── communities.component.ts
+│   │   ├── create
+│   │   │   ├── create.component.css
+│   │   │   ├── create.component.html
+│   │   │   └── create.component.ts
+│   │   ├── group
+│   │   │   ├── group.component.css
+│   │   │   ├── group.component.html
+│   │   │   └── group.component.ts
+│   │   ├── home
+│   │   │   ├── home.component.css
+│   │   │   ├── home.component.html
+│   │   │   └── home.component.ts
+│   │   ├── invite-friends
+│   │   │   ├── invite-friends.component.css
+│   │   │   ├── invite-friends.component.html
+│   │   │   └── invite-friends.component.ts
+│   │   ├── league
+│   │   │   ├── create
+│   │   │   │   ├── create-league.component.css
+│   │   │   │   ├── create-league.component.html
+│   │   │   │   └── create-league.component.ts
+│   │   │   └── view
+│   │   │       ├── view-league.component.css
+│   │   │       ├── view-league.component.html
+│   │   │       └── view-league.component.ts
+│   │   ├── ranking
+│   │   │   ├── ranking.component.css
+│   │   │   ├── ranking.component.html
+│   │   │   └── ranking.component.ts
+│   │   ├── statistics
+│   │   │   ├── statistics.component.css
+│   │   │   ├── statistics.component.html
+│   │   │   └── statistics.component.ts
+│   │   └── user
+│   │       ├── profile
+│   │       │   ├── profile.component.css
+│   │       │   ├── profile.component.html
+│   │       │   └── profile.component.ts
+│   │       └── settings
+│   │           ├── settings.component.css
+│   │           ├── settings.component.html
+│   │           └── settings.component.ts
+│   └── shared
+│       ├── components
+│       │   ├── footer
+│       │   │   └── footer.component.ts
+│       │   └── header
+│       │       ├── header.component.html
+│       │       └── header.component.ts
+│       └── directives
+│           └── highlight.directive.ts
+├── assets
+│   └── images
+├── environments
+│   ├── environment.prod.ts
+│   └── environment.ts
+├── favicon.ico
+├── folder_creation.sh
+├── index.html
+├── main.ts
+├── polyfills.ts
+├── scss
+│   ├── _custom.scss
+│   ├── fonts
+│   │   ├── feather
+│   │   │   ├── fonts
+│   │   │   │   ├── feather.eot
+│   │   │   │   ├── feather.svg
+│   │   │   │   ├── feather.ttf
+│   │   │   │   └── feather.woff
+│   │   │   └── iconfont.scss
+│   │   └── fontawesome
+│   │       ├── scss
+│   │       │   ├── _animated.scss
+│   │       │   ├── _bordered-pulled.scss
+│   │       │   ├── brands.scss
+│   │       │   ├── _core.scss
+│   │       │   ├── _fixed-width.scss
+│   │       │   ├── fontawesome.scss
+│   │       │   ├── _icons.scss
+│   │       │   ├── _larger.scss
+│   │       │   ├── _list.scss
+│   │       │   ├── _mixins.scss
+│   │       │   ├── regular.scss
+│   │       │   ├── _rotated-flipped.scss
+│   │       │   ├── _screen-reader.scss
+│   │       │   ├── _shims.scss
+│   │       │   ├── solid.scss
+│   │       │   ├── _stacked.scss
+│   │       │   ├── v4-shims.scss
+│   │       │   └── _variables.scss
+│   │       └── webfonts
+│   │           ├── fa-brands-400.eot
+│   │           ├── fa-brands-400.svg
+│   │           ├── fa-brands-400.ttf
+│   │           ├── fa-brands-400.woff
+│   │           ├── fa-brands-400.woff2
+│   │           ├── fa-regular-400.eot
+│   │           ├── fa-regular-400.svg
+│   │           ├── fa-regular-400.ttf
+│   │           ├── fa-regular-400.woff
+│   │           ├── fa-regular-400.woff2
+│   │           ├── fa-solid-900.eot
+│   │           ├── fa-solid-900.svg
+│   │           ├── fa-solid-900.ttf
+│   │           ├── fa-solid-900.woff
+│   │           └── fa-solid-900.woff2
+│   ├── _general.scss
+│   ├── _generic.scss
+│   ├── menu
+│   │   └── _menu-lite.scss
+│   ├── mixins
+│   │   ├── _buttons.scss
+│   │   └── _function.scss
+│   ├── plugins
+│   │   ├── _angular-morris-js.scss
+│   │   └── _plugins.scss
+│   ├── theme-elements
+│   │   ├── _authentication.scss
+│   │   ├── _badge.scss
+│   │   ├── _breadcrumb-pagination.scss
+│   │   ├── _button.scss
+│   │   ├── _data-tables.scss
+│   │   ├── _form.scss
+│   │   ├── _labels-badges.scss
+│   │   ├── _nav.scss
+│   │   ├── _radiobox-checkbox.scss
+│   │   └── _theme-elements.scss
+│   └── _variables.scss
+├── styles.scss
+└── test.ts
+
+44 directories, 125 files

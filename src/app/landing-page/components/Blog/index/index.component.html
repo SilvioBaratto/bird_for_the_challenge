@@ -1,0 +1,20 @@
+<section
+  id="blog"
+  class="bg-gray-light dark:bg-bg-color-dark py-16 md:py-20 lg:py-28"
+>
+  <div class="container">
+    <app-section-title
+      title="Updates"
+      paragraph=""
+      [center]="true"
+    ></app-section-title>
+
+    <div
+      class="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 xl:grid-cols-3"
+    >
+      <div *ngFor="let blog of blogs" class="w-full">
+        <app-single-blog [blog]="blog"></app-single-blog>
+      </div>
+    </div>
+  </div>
+</section>
