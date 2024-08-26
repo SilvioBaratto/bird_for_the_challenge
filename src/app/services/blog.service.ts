@@ -40,7 +40,7 @@ export class BlogService {
         'BIRD Transformation Rules for FINREP are now improved. Furthermore, new BIRD APIs for Logical Transformation Rules and related lineage are now released (incomingLogicalLineages and incomingRenderingLogicalLineages endpoints).',
       image: '/assets/images/blog/fantadate.webp',
       author: {
-        name: 'Arianna Nuvoli',
+        name: 'Fabio Camerota',
         image: '/assets/images/blog/author-03.png',
         designation: 'Research Analyst',
       },
