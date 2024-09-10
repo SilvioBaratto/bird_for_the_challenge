@@ -17,24 +17,24 @@ interface Menu {
 export class HeaderComponent implements OnInit {
 
   menuData: Menu[] = [
-    {
-      id: 1,
-      title: "About BIRD",
-      path: "https://bird.ecb.europa.eu/projectDefinition",
-      newTab: false,
-    },
-    {
-      id: 2,
-      title: "Navigator",
-      path: "https://bird.ecb.europa.eu/nav",
-      newTab: false,
-    },
-    {
-      id: 3,
-      title: "Metadata & Exports",
-      path: "https://bird.ecb.europa.eu/cm",
-      newTab: false,
-    },
+    // {
+    //   id: 1,
+    //   title: "About BIRD",
+    //   path: "https://bird.ecb.europa.eu/projectDefinition",
+    //   newTab: false,
+    // },
+    // {
+    //   id: 2,
+    //   title: "Navigator",
+    //   path: "https://bird.ecb.europa.eu/nav",
+    //   newTab: false,
+    // },
+    // {
+    //   id: 3,
+    //   title: "Metadata & Exports",
+    //   path: "https://bird.ecb.europa.eu/cm",
+    //   newTab: false,
+    // },
   ];
 
   navbarOpen = false;

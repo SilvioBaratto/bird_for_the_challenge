@@ -1,18 +1,42 @@
-<section id="features" class="py-16 md:py-20 lg:py-28">
-    <div class="container">
-        <app-section-title [title]="'Main Features'"
-            [center]="true" class="text-body-color dark:text-body-color-dark">
-        </app-section-title>
+<!-- Container for the form with extra padding -->
+<div class="max-w-md md:max-w-lg lg:max-w-xl mx-auto p-6 md:p-8 lg:p-10 bg-white shadow-lg rounded-lg">
+    <form (ngSubmit)="onSubmit()" class="space-y-4">
 
-        <div class="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
-            <ng-container *ngFor="let feature of features">
-                <a [href]="feature.link" target="_blank"
-                    class="flex flex-col items-center text-center no-underline text-body-color dark:text-body-color-dark">
-                    <app-single-feature [icon]="feature.icon" [title]="feature.title" [paragraph]="feature.paragraph"
-                        class="flex flex-col items-center text-center">
-                    </app-single-feature>
-                </a>
-            </ng-container>
+        <!-- Task Input -->
+        <div>
+            <label for="task" class="block text-sm md:text-base font-medium text-gray-700">
+                Enter something you want to do
+            </label>
+            <input type="text" id="task" [(ngModel)]="task" name="task" required
+                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-sm md:text-base">
         </div>
+
+        <!-- Dropdown for existing activities -->
+        <div class="relative">
+            <label for="activities" class="block text-sm md:text-base font-medium text-gray-700">
+                Or choose an existing activity
+            </label>
+            <select id="activities" (change)="onSelectActivity($event)"
+                class="block w-full px-3 py-2 mt-1 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-sm md:text-base">
+                <option value="" disabled selected>Select an activity</option>
+                <option *ngFor="let activity of activities" [value]="activity.answer">{{ activity.answer }}</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex justify-center">
+            <button type="submit"
+                class="px-4 py-2 md:px-6 md:py-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 text-sm md:text-base">
+                Add Task
+            </button>
+        </div>
+
+    </form>
+</div>
+
+<!-- Container for the chart with extra padding -->
+<div class="max-w-md md:max-w-lg lg:max-w-xl mx-auto mt-10 p-6 md:p-8 lg:p-10 bg-white shadow-lg rounded-lg">
+    <div class="mt-8">
+        <canvas id="activityChart"></canvas> <!-- Canvas for Chart.js graph -->
     </div>
-</section>
+</div>
