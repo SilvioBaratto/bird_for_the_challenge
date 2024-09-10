@@ -22,24 +22,24 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     // Set the page title and meta description for better SEO
-    this.titleService.setTitle('Sign Up | Join FantaCreator for Custom Fantasy Leagues');
+    this.titleService.setTitle('Sign Up | Join the BIRD Project for Simplified Regulatory Reporting');
     this.metaService.updateTag({
       name: 'description',
-      content: 'Create your FantaCreator account to start building custom fantasy leagues, connect with friends, and enjoy a personalized gaming experience.',
+      content: 'Create your BIRD Project account to access tools for streamlined regulatory reporting, manage financial data, and stay compliant with the European Central Bank’s reporting standards.',
     });
 
     // Additional meta tags for SEO optimization
     this.metaService.updateTag({
       name: 'keywords',
-      content: 'FantaCreator, sign up, create account, fantasy leagues, custom gaming, community, personalized experience',
+      content: 'BIRD Project, sign up, create account, regulatory reporting, financial data, compliance, European Central Bank, financial institutions',
     });
     this.metaService.updateTag({
       property: 'og:title',
-      content: 'Sign Up for FantaCreator | Build Custom Fantasy Leagues',
+      content: 'Sign Up for the BIRD Project | Streamline Your Regulatory Reporting',
     });
     this.metaService.updateTag({
       property: 'og:description',
-      content: 'Join FantaCreator today to create your own fantasy leagues, invite friends, and customize your gaming experience across various sports and activities.',
+      content: 'Join the BIRD Project today to access tools that help financial institutions streamline regulatory reporting, manage financial data efficiently, and stay compliant with the European Central Bank standards.',
     });
     this.metaService.updateTag({
       property: 'og:type',
@@ -52,8 +52,8 @@ export class SignupComponent implements OnInit {
       this.apiService.signUpUser(this.user).subscribe(
         response => {
           console.log('User signed up successfully:', response);
-          // Redirect to web.fantacreator.com after successful signup
-          window.location.href = 'https://web.fantacreator.com';
+          // Redirect to the BIRD Project dashboard after successful signup
+          window.location.href = 'https://bird.ecb.europa.eu/dashboard';
         },
         error => {
           console.error('Error signing up user', error);

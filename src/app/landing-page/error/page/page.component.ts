@@ -7,8 +7,8 @@ import { Router } from '@angular/router';
   templateUrl: './page.component.html',
 })
 export class ErrorPageComponent implements OnInit {
-  pageTitle: string = 'Oops! Something Went Wrong | FantaCreator';
-  pageDescription: string = 'Sorry, the page you are looking for could not be found. Explore FantaCreator for customizable fantasy gaming experiences and reconnect with your leagues and community.';
+  pageTitle: string = 'Oops! Something Went Wrong | BIRD Project';
+  pageDescription: string = 'Sorry, the page you are looking for could not be found. Explore the BIRD Project by the European Central Bank to learn more about simplified regulatory reporting and financial data management.';
 
   constructor(
     private titleService: Title,
@@ -24,7 +24,7 @@ export class ErrorPageComponent implements OnInit {
     // Additional meta tags for SEO optimization
     this.metaService.updateTag({
       name: 'keywords',
-      content: 'FantaCreator, error page, page not found, fantasy gaming, custom leagues, reconnect, home page',
+      content: 'BIRD Project, error page, page not found, regulatory reporting, financial data, ECB, home page',
     });
     this.metaService.updateTag({
       property: 'og:title',

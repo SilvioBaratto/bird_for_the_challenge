@@ -6,8 +6,8 @@ import { Title, Meta } from '@angular/platform-browser';
   templateUrl: './page.component.html',
 })
 export class ContactPageComponent implements OnInit {
-  pageTitle: string = 'Contact Us | FantaCreator Support and Community Engagement';
-  pageDescription: string = 'Get in touch with the FantaCreator team for support, feedback, or inquiries. We are here to help you enhance your fantasy gaming experience and connect with our community.';
+  pageTitle: string = 'Contact Us | BIRD Project Support and Inquiries';
+  pageDescription: string = 'Get in touch with the BIRD Project team for support, feedback, or inquiries regarding regulatory reporting and data management. We are here to assist you with any questions about the European Central Bank’s BIRD initiative.';
 
   constructor(
     private titleService: Title,
@@ -22,7 +22,7 @@ export class ContactPageComponent implements OnInit {
     // Additional meta tags for SEO optimization
     this.metaService.updateTag({
       name: 'keywords',
-      content: 'FantaCreator, contact, support, fantasy gaming assistance, community engagement, customer service',
+      content: 'BIRD Project, contact, support, regulatory reporting assistance, European Central Bank, financial institutions, customer service',
     });
     this.metaService.updateTag({
       property: 'og:title',

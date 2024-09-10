@@ -20,24 +20,24 @@ export class SigninComponent implements OnInit {
 
   ngOnInit(): void {
     // Set the title and meta description for better SEO
-    this.titleService.setTitle('Sign In | Access Your FantaCreator Account');
+    this.titleService.setTitle('Sign In | Access Your BIRD Project Account');
     this.metaService.updateTag({
       name: 'description',
-      content: 'Sign in to your FantaCreator account to manage your fantasy leagues, connect with friends, and customize your gaming experience.',
+      content: 'Sign in to your BIRD Project account to manage your regulatory reporting data, access the latest updates, and streamline your financial reporting process.',
     });
 
     // Additional meta tags for SEO optimization
     this.metaService.updateTag({
       name: 'keywords',
-      content: 'FantaCreator, sign in, login, fantasy leagues, manage account, gaming platform, community engagement',
+      content: 'BIRD Project, sign in, login, regulatory reporting, financial institutions, compliance, European Central Bank, manage account',
     });
     this.metaService.updateTag({
       property: 'og:title',
-      content: 'Sign In to FantaCreator | Manage Your Fantasy Leagues',
+      content: 'Sign In to BIRD Project | Manage Your Regulatory Reporting',
     });
     this.metaService.updateTag({
       property: 'og:description',
-      content: 'Access your FantaCreator account to create and manage custom fantasy leagues, connect with the community, and enhance your gaming experience.',
+      content: 'Access your BIRD Project account to manage regulatory reporting, streamline compliance, and ensure up-to-date financial data management.',
     });
     this.metaService.updateTag({
       property: 'og:type',
@@ -52,13 +52,13 @@ export class SigninComponent implements OnInit {
     }).subscribe(
       response => {
         console.log('User logged in successfully:', response);
-        // Redirect to web.fantacreator.com after successful login
-        window.location.href = 'https://web.fantacreator.com';
+        // Redirect to the relevant BIRD Project dashboard after successful login
+        window.location.href = 'https://bird.ecb.europa.eu/dashboard';
       },
       error => {
         console.error('Error logging in user', error);
         // Handle error (e.g., show an error message)
       }
     );
-  }  
+  }
 }

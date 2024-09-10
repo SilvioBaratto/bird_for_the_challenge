@@ -71,16 +71,16 @@ export class HeaderComponent implements OnInit {
   }
 
   updateMetaTags() {
-    let title = 'FantaCreator';
-    let description = 'Create your custom fantasy games, play with friends, and share the excitement in your personalized fantasy league.';
+    let title = 'BIRD Project';
+    let description = 'Stay updated with the latest information on the European Central Bank’s BIRD Project, simplifying regulatory reporting for financial institutions.';
 
     // Customize the title and description based on the current route
     if (this.router.url.includes('/about')) {
-      title = 'About FantaCreator - Learn More About Us';
-      description = 'Discover the mission and vision behind FantaCreator, the ultimate platform for custom fantasy games.';
+      title = 'About BIRD Project - Learn More About the Initiative';
+      description = 'Discover the BIRD Project by the European Central Bank, aimed at streamlining regulatory reporting for financial institutions.';
     } else if (this.router.url.includes('/blog')) {
-      title = 'FantaCreator Blog - Insights and Tips';
-      description = 'Stay updated with the latest insights and tips from the FantaCreator blog, your go-to source for fantasy gaming.';
+      title = 'BIRD Project Blog - Insights on Regulatory Reporting';
+      description = 'Read the latest insights and strategies from the BIRD Project blog, covering financial data management and regulatory reporting updates.';
     }
 
     this.titleService.setTitle(title);

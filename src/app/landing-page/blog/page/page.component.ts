@@ -8,8 +8,8 @@ import { Blog } from '../../../models/blog.model';
   templateUrl: './page.component.html',
 })
 export class BlogPageComponent implements OnInit {
-  pageTitle: string = 'FantaCreator Blog | Latest Insights on Fantasy Gaming and Custom Leagues';
-  pageDescription: string = 'Welcome to the FantaCreator Blog, your go-to source for the latest insights, strategies, and tips on fantasy gaming. Learn how to create custom leagues, optimize your gaming experience, and engage with a community of like-minded enthusiasts.';
+  pageTitle: string = 'BIRD Project Blog | Latest Insights on Regulatory Reporting and Financial Data';
+  pageDescription: string = 'Welcome to the BIRD Project Blog, your source for the latest updates, strategies, and insights on regulatory reporting. Discover how the European Central Bank\'s BIRD initiative is helping financial institutions streamline their reporting processes and stay compliant with regulatory requirements.';
 
   blogs: Blog[] = [];
 
@@ -28,7 +28,7 @@ export class BlogPageComponent implements OnInit {
     // Additional meta tags for SEO optimization
     this.metaService.updateTag({
       name: 'keywords',
-      content: 'FantaCreator, fantasy gaming, custom leagues, gaming strategies, blog, fantasy sports, community engagement',
+      content: 'BIRD Project, regulatory reporting, financial institutions, European Central Bank, compliance, data dictionary, reporting standards, blog',
     });
     this.metaService.updateTag({
       property: 'og:title',
